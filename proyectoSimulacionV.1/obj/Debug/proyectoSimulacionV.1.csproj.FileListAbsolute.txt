@@ -1,0 +1,11 @@
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\bin\Debug\proyectoSimulacionV.1.exe.config
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\bin\Debug\proyectoSimulacionV.1.exe
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\bin\Debug\proyectoSimulacionV.1.pdb
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.csprojAssemblyReference.cache
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Form1.resources
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Properties.Resources.resources
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.csproj.GenerateResource.cache
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.exe
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.pdb
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.CrearProducto.resources
+C:\Users\hugui\source\repos\proyectoSimulacionV.1\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.EditarProducto.resources
