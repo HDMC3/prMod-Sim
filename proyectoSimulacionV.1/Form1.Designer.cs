@@ -37,23 +37,24 @@
             this.groupListaProductos = new System.Windows.Forms.GroupBox();
             this.tblProductos = new System.Windows.Forms.DataGridView();
             this.tabSimulacion = new System.Windows.Forms.TabPage();
-            this.groupParametrosEntrada = new System.Windows.Forms.GroupBox();
-            this.lblHoraInicio = new System.Windows.Forms.Label();
-            this.lblHoraFin = new System.Windows.Forms.Label();
-            this.txtHoraInicio = new System.Windows.Forms.NumericUpDown();
-            this.txtHoraFin = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupParametrosEntrada = new System.Windows.Forms.GroupBox();
             this.checkStock = new System.Windows.Forms.CheckBox();
+            this.txtHoraFin = new System.Windows.Forms.NumericUpDown();
+            this.txtHoraInicio = new System.Windows.Forms.NumericUpDown();
+            this.lblHoraFin = new System.Windows.Forms.Label();
+            this.lblHoraInicio = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabProductos.SuspendLayout();
             this.groupAccionesProductos.SuspendLayout();
             this.groupListaProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblProductos)).BeginInit();
             this.tabSimulacion.SuspendLayout();
-            this.groupParametrosEntrada.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoraInicio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoraFin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupParametrosEntrada.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHoraFin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHoraInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -80,6 +81,7 @@
             // 
             // groupAccionesProductos
             // 
+            this.groupAccionesProductos.Controls.Add(this.label1);
             this.groupAccionesProductos.Controls.Add(this.btnEliminarProducto);
             this.groupAccionesProductos.Controls.Add(this.btnEditarProducto);
             this.groupAccionesProductos.Controls.Add(this.btnCrearProducto);
@@ -157,6 +159,16 @@
             this.tabSimulacion.Text = "Simulacion";
             this.tabSimulacion.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(329, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(710, 477);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // groupParametrosEntrada
             // 
             this.groupParametrosEntrada.Controls.Add(this.checkStock);
@@ -172,47 +184,15 @@
             this.groupParametrosEntrada.TabStop = false;
             this.groupParametrosEntrada.Text = "Parametros de entrada";
             // 
-            // lblHoraInicio
+            // checkStock
             // 
-            this.lblHoraInicio.AutoSize = true;
-            this.lblHoraInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraInicio.Location = new System.Drawing.Point(6, 36);
-            this.lblHoraInicio.Name = "lblHoraInicio";
-            this.lblHoraInicio.Size = new System.Drawing.Size(103, 18);
-            this.lblHoraInicio.TabIndex = 0;
-            this.lblHoraInicio.Text = "Hora de inicio:";
-            // 
-            // lblHoraFin
-            // 
-            this.lblHoraFin.AutoSize = true;
-            this.lblHoraFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraFin.Location = new System.Drawing.Point(6, 74);
-            this.lblHoraFin.Name = "lblHoraFin";
-            this.lblHoraFin.Size = new System.Drawing.Size(84, 18);
-            this.lblHoraFin.TabIndex = 1;
-            this.lblHoraFin.Text = "Hora de fin:";
-            // 
-            // txtHoraInicio
-            // 
-            this.txtHoraInicio.Location = new System.Drawing.Point(115, 33);
-            this.txtHoraInicio.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.txtHoraInicio.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtHoraInicio.Name = "txtHoraInicio";
-            this.txtHoraInicio.Size = new System.Drawing.Size(120, 26);
-            this.txtHoraInicio.TabIndex = 2;
-            this.txtHoraInicio.Value = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
+            this.checkStock.AutoSize = true;
+            this.checkStock.Location = new System.Drawing.Point(9, 126);
+            this.checkStock.Name = "checkStock";
+            this.checkStock.Size = new System.Drawing.Size(142, 24);
+            this.checkStock.TabIndex = 4;
+            this.checkStock.Text = "Stock aleatorio";
+            this.checkStock.UseVisualStyleBackColor = true;
             // 
             // txtHoraFin
             // 
@@ -236,25 +216,56 @@
             0,
             0});
             // 
-            // dataGridView1
+            // txtHoraInicio
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(329, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(710, 477);
-            this.dataGridView1.TabIndex = 1;
+            this.txtHoraInicio.Location = new System.Drawing.Point(115, 33);
+            this.txtHoraInicio.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.txtHoraInicio.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtHoraInicio.Name = "txtHoraInicio";
+            this.txtHoraInicio.Size = new System.Drawing.Size(120, 26);
+            this.txtHoraInicio.TabIndex = 2;
+            this.txtHoraInicio.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             // 
-            // checkStock
+            // lblHoraFin
             // 
-            this.checkStock.AutoSize = true;
-            this.checkStock.Location = new System.Drawing.Point(9, 126);
-            this.checkStock.Name = "checkStock";
-            this.checkStock.Size = new System.Drawing.Size(142, 24);
-            this.checkStock.TabIndex = 4;
-            this.checkStock.Text = "Stock aleatorio";
-            this.checkStock.UseVisualStyleBackColor = true;
+            this.lblHoraFin.AutoSize = true;
+            this.lblHoraFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraFin.Location = new System.Drawing.Point(6, 74);
+            this.lblHoraFin.Name = "lblHoraFin";
+            this.lblHoraFin.Size = new System.Drawing.Size(84, 18);
+            this.lblHoraFin.TabIndex = 1;
+            this.lblHoraFin.Text = "Hora de fin:";
+            // 
+            // lblHoraInicio
+            // 
+            this.lblHoraInicio.AutoSize = true;
+            this.lblHoraInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraInicio.Location = new System.Drawing.Point(6, 36);
+            this.lblHoraInicio.Name = "lblHoraInicio";
+            this.lblHoraInicio.Size = new System.Drawing.Size(103, 18);
+            this.lblHoraInicio.TabIndex = 0;
+            this.lblHoraInicio.Text = "Hora de inicio:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ola miaumor";
             // 
             // Form1
             // 
@@ -267,14 +278,15 @@
             this.tabControl1.ResumeLayout(false);
             this.tabProductos.ResumeLayout(false);
             this.groupAccionesProductos.ResumeLayout(false);
+            this.groupAccionesProductos.PerformLayout();
             this.groupListaProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblProductos)).EndInit();
             this.tabSimulacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupParametrosEntrada.ResumeLayout(false);
             this.groupParametrosEntrada.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoraInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoraFin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHoraInicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,6 +309,7 @@
         private System.Windows.Forms.Label lblHoraFin;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox checkStock;
+        private System.Windows.Forms.Label label1;
     }
 }
 
