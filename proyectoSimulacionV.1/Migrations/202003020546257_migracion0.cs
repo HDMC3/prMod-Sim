@@ -3,7 +3,7 @@ namespace proyectoSimulacionV._1.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class migracion11 : DbMigration
+    public partial class migracion0 : DbMigration
     {
         public override void Up()
         {

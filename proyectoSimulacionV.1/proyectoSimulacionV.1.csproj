@@ -47,9 +47,6 @@
     <Reference Include="MySql.Data.Entity.EF6, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.Entity.6.10.9\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
-    <Reference Include="MySqlConnector, Version=0.62.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySqlConnector.0.62.0\lib\net471\MySqlConnector.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
@@ -94,6 +91,12 @@
     <Compile Include="CrearProducto.Designer.cs">
       <DependentUpon>CrearProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearTipoProducto.Designer.cs">
+      <DependentUpon>CrearTipoProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,13 +109,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003011159038_migracion1.cs" />
-    <Compile Include="Migrations\202003011159038_migracion1.Designer.cs">
-      <DependentUpon>202003011159038_migracion1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003012107131_migracion11.cs" />
-    <Compile Include="Migrations\202003012107131_migracion11.Designer.cs">
-      <DependentUpon>202003012107131_migracion11.cs</DependentUpon>
+    <Compile Include="Migrations\202003020546257_migracion0.cs" />
+    <Compile Include="Migrations\202003020546257_migracion0.Designer.cs">
+      <DependentUpon>202003020546257_migracion0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelos\bdContext.cs" />
@@ -128,17 +127,17 @@
     <EmbeddedResource Include="CrearProducto.resx">
       <DependentUpon>CrearProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearTipoProducto.resx">
+      <DependentUpon>CrearTipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarProducto.resx">
       <DependentUpon>EditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003011159038_migracion1.resx">
-      <DependentUpon>202003011159038_migracion1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003012107131_migracion11.resx">
-      <DependentUpon>202003012107131_migracion11.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003020546257_migracion0.resx">
+      <DependentUpon>202003020546257_migracion0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

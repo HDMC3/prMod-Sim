@@ -44,6 +44,13 @@
             this.txtHoraInicio = new System.Windows.Forms.NumericUpDown();
             this.lblHoraFin = new System.Windows.Forms.Label();
             this.lblHoraInicio = new System.Windows.Forms.Label();
+            this.tabTipoProductos = new System.Windows.Forms.TabPage();
+            this.groupTiposProducto = new System.Windows.Forms.GroupBox();
+            this.groupAccionesTipos = new System.Windows.Forms.GroupBox();
+            this.tblTiposProducto = new System.Windows.Forms.DataGridView();
+            this.btnCrearTipoProducto = new System.Windows.Forms.Button();
+            this.btnEditarTipoProducto = new System.Windows.Forms.Button();
+            this.btnEliminarTipoProducto = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabProductos.SuspendLayout();
             this.groupAccionesProductos.SuspendLayout();
@@ -54,17 +61,23 @@
             this.groupParametrosEntrada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoraFin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoraInicio)).BeginInit();
+            this.tabTipoProductos.SuspendLayout();
+            this.groupTiposProducto.SuspendLayout();
+            this.groupAccionesTipos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblTiposProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabProductos);
+            this.tabControl1.Controls.Add(this.tabTipoProductos);
             this.tabControl1.Controls.Add(this.tabSimulacion);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1053, 518);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tabProductos
             // 
@@ -137,11 +150,14 @@
             // 
             // tblProductos
             // 
+            this.tblProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblProductos.Location = new System.Drawing.Point(19, 29);
+            this.tblProductos.MultiSelect = false;
             this.tblProductos.Name = "tblProductos";
             this.tblProductos.RowHeadersWidth = 51;
             this.tblProductos.RowTemplate.Height = 24;
+            this.tblProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblProductos.Size = new System.Drawing.Size(784, 429);
             this.tblProductos.TabIndex = 0;
             // 
@@ -256,6 +272,86 @@
             this.lblHoraInicio.TabIndex = 0;
             this.lblHoraInicio.Text = "Hora de inicio:";
             // 
+            // tabTipoProductos
+            // 
+            this.tabTipoProductos.Controls.Add(this.groupAccionesTipos);
+            this.tabTipoProductos.Controls.Add(this.groupTiposProducto);
+            this.tabTipoProductos.Location = new System.Drawing.Point(4, 25);
+            this.tabTipoProductos.Name = "tabTipoProductos";
+            this.tabTipoProductos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTipoProductos.Size = new System.Drawing.Size(1045, 489);
+            this.tabTipoProductos.TabIndex = 2;
+            this.tabTipoProductos.Text = "Tipos producto";
+            this.tabTipoProductos.UseVisualStyleBackColor = true;
+            // 
+            // groupTiposProducto
+            // 
+            this.groupTiposProducto.Controls.Add(this.tblTiposProducto);
+            this.groupTiposProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupTiposProducto.Location = new System.Drawing.Point(6, 6);
+            this.groupTiposProducto.Name = "groupTiposProducto";
+            this.groupTiposProducto.Size = new System.Drawing.Size(818, 477);
+            this.groupTiposProducto.TabIndex = 0;
+            this.groupTiposProducto.TabStop = false;
+            this.groupTiposProducto.Text = "Lista tipos";
+            // 
+            // groupAccionesTipos
+            // 
+            this.groupAccionesTipos.Controls.Add(this.btnEliminarTipoProducto);
+            this.groupAccionesTipos.Controls.Add(this.btnEditarTipoProducto);
+            this.groupAccionesTipos.Controls.Add(this.btnCrearTipoProducto);
+            this.groupAccionesTipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupAccionesTipos.Location = new System.Drawing.Point(830, 6);
+            this.groupAccionesTipos.Name = "groupAccionesTipos";
+            this.groupAccionesTipos.Size = new System.Drawing.Size(209, 477);
+            this.groupAccionesTipos.TabIndex = 1;
+            this.groupAccionesTipos.TabStop = false;
+            this.groupAccionesTipos.Text = "Acciones";
+            // 
+            // tblTiposProducto
+            // 
+            this.tblTiposProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblTiposProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblTiposProducto.Location = new System.Drawing.Point(19, 29);
+            this.tblTiposProducto.MultiSelect = false;
+            this.tblTiposProducto.Name = "tblTiposProducto";
+            this.tblTiposProducto.RowHeadersWidth = 51;
+            this.tblTiposProducto.RowTemplate.Height = 24;
+            this.tblTiposProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblTiposProducto.Size = new System.Drawing.Size(784, 429);
+            this.tblTiposProducto.TabIndex = 0;
+            // 
+            // btnCrearTipoProducto
+            // 
+            this.btnCrearTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearTipoProducto.Location = new System.Drawing.Point(7, 28);
+            this.btnCrearTipoProducto.Name = "btnCrearTipoProducto";
+            this.btnCrearTipoProducto.Size = new System.Drawing.Size(196, 36);
+            this.btnCrearTipoProducto.TabIndex = 0;
+            this.btnCrearTipoProducto.Text = "Nuevo tipo";
+            this.btnCrearTipoProducto.UseVisualStyleBackColor = true;
+            this.btnCrearTipoProducto.Click += new System.EventHandler(this.btnCrearTipoProducto_Click);
+            // 
+            // btnEditarTipoProducto
+            // 
+            this.btnEditarTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarTipoProducto.Location = new System.Drawing.Point(6, 70);
+            this.btnEditarTipoProducto.Name = "btnEditarTipoProducto";
+            this.btnEditarTipoProducto.Size = new System.Drawing.Size(196, 36);
+            this.btnEditarTipoProducto.TabIndex = 1;
+            this.btnEditarTipoProducto.Text = "Editar tipo";
+            this.btnEditarTipoProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarTipoProducto
+            // 
+            this.btnEliminarTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarTipoProducto.Location = new System.Drawing.Point(6, 112);
+            this.btnEliminarTipoProducto.Name = "btnEliminarTipoProducto";
+            this.btnEliminarTipoProducto.Size = new System.Drawing.Size(196, 36);
+            this.btnEliminarTipoProducto.TabIndex = 2;
+            this.btnEliminarTipoProducto.Text = "Eliminar tipo";
+            this.btnEliminarTipoProducto.Click += new System.EventHandler(this.btnEliminarTipoProducto_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -275,6 +371,10 @@
             this.groupParametrosEntrada.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoraFin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoraInicio)).EndInit();
+            this.tabTipoProductos.ResumeLayout(false);
+            this.groupTiposProducto.ResumeLayout(false);
+            this.groupAccionesTipos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblTiposProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,6 +397,13 @@
         private System.Windows.Forms.Label lblHoraFin;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox checkStock;
+        private System.Windows.Forms.TabPage tabTipoProductos;
+        private System.Windows.Forms.GroupBox groupAccionesTipos;
+        private System.Windows.Forms.Button btnCrearTipoProducto;
+        private System.Windows.Forms.GroupBox groupTiposProducto;
+        private System.Windows.Forms.Button btnEliminarTipoProducto;
+        private System.Windows.Forms.Button btnEditarTipoProducto;
+        public System.Windows.Forms.DataGridView tblTiposProducto;
     }
 }
 

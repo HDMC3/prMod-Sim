@@ -7,13 +7,13 @@ namespace proyectoSimulacionV._1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class migracion1 : IMigrationMetadata
+    public sealed partial class migracion0 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(migracion1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(migracion0));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003011159038_migracion1"; }
+            get { return "202003020546257_migracion0"; }
         }
         
         string IMigrationMetadata.Source

@@ -29,19 +29,16 @@ C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSi
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.csproj.CopyComplete
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.exe
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.pdb
-C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\MySqlConnector.dll
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Buffers.dll
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Memory.dll
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\MySqlConnector.xml
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Buffers.xml
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Memory.xml
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\hugui\source\repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion1.resources
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\bin\Debug\proyectoSimulacionV.1.exe.config
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\bin\Debug\proyectoSimulacionV.1.exe
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\bin\Debug\proyectoSimulacionV.1.pdb
@@ -76,3 +73,5 @@ D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.exe
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.pdb
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion11.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion0.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.CrearTipoProducto.resources
