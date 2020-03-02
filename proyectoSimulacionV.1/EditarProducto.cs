@@ -16,5 +16,25 @@ namespace proyectoSimulacionV._1
         {
             InitializeComponent();
         }
+
+        private void chkHabilitado_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTipoProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTipoProducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStock_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

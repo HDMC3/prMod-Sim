@@ -44,7 +44,6 @@
             this.txtHoraInicio = new System.Windows.Forms.NumericUpDown();
             this.lblHoraFin = new System.Windows.Forms.Label();
             this.lblHoraInicio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabProductos.SuspendLayout();
             this.groupAccionesProductos.SuspendLayout();
@@ -81,7 +80,6 @@
             // 
             // groupAccionesProductos
             // 
-            this.groupAccionesProductos.Controls.Add(this.label1);
             this.groupAccionesProductos.Controls.Add(this.btnEliminarProducto);
             this.groupAccionesProductos.Controls.Add(this.btnEditarProducto);
             this.groupAccionesProductos.Controls.Add(this.btnCrearProducto);
@@ -258,15 +256,6 @@
             this.lblHoraInicio.TabIndex = 0;
             this.lblHoraInicio.Text = "Hora de inicio:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ola miaumor";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,7 +267,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabProductos.ResumeLayout(false);
             this.groupAccionesProductos.ResumeLayout(false);
-            this.groupAccionesProductos.PerformLayout();
             this.groupListaProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblProductos)).EndInit();
             this.tabSimulacion.ResumeLayout(false);
@@ -309,7 +297,6 @@
         private System.Windows.Forms.Label lblHoraFin;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox checkStock;
-        private System.Windows.Forms.Label label1;
     }
 }
 
