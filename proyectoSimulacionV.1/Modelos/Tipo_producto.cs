@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 namespace proyectoSimulacionV._1.Modelos
 {
     [Table("tipo_producto")]
-    class Tipo_producto
+    public class Tipo_producto
     {
         [Key]
         public int cod_tipo_producto { get; set; }

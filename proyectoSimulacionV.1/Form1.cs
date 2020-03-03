@@ -1,4 +1,5 @@
-﻿using proyectoSimulacionV._1.Modelos;
+﻿using MySql.Data.MySqlClient;
+using proyectoSimulacionV._1.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace proyectoSimulacionV._1
 {
     public partial class Form1 : Form
     {
+        private int currentRowIndex;
         public Form1()
         {
             InitializeComponent();
@@ -79,10 +81,13 @@ namespace proyectoSimulacionV._1
             {
                 tblTiposProducto.Rows.Clear();
                 tblTiposProducto.Columns.Clear();
+                tblTiposProducto.Columns.Add("codigo_tipo", "Codigo");
+                tblTiposProducto.Columns[0].Visible = false;
                 tblTiposProducto.Columns.Add("nombre", "Nombre");
                 DataGridViewCheckBoxColumn checkCol = new DataGridViewCheckBoxColumn();
                 tblTiposProducto.Columns.Add(checkCol);
-                tblTiposProducto.Columns[1].HeaderText = "Habilitado";
+                tblTiposProducto.Columns[2].HeaderText = "Habilitado";
+                
                 var productos = db.Tipos_producto.Select(tp => new
                 {
                     cod_tipo_producto = tp.cod_tipo_producto,
@@ -92,7 +97,7 @@ namespace proyectoSimulacionV._1
 
                 foreach(var item in productos)
                 {
-                    tblTiposProducto.Rows.Add(item.nombre, item.habilitado);
+                    tblTiposProducto.Rows.Add(item.cod_tipo_producto ,item.nombre, item.habilitado);
                 }
 
             }
@@ -111,21 +116,85 @@ namespace proyectoSimulacionV._1
 
         private void btnCrearTipoProducto_Click(object sender, EventArgs e)
         {
-            CrearTipoProducto formEditarTipo = new CrearTipoProducto();
-            formEditarTipo.Visible = true;
-            formEditarTipo.FormClosed += new FormClosedEventHandler(cierreCrearTipoProducto);
-        }
-
-        private void btnEliminarTipoProducto_Click(object sender, EventArgs e)
-        {
-            //Console.WriteLine(tblTiposProducto.Rows.Count);
-            //Console.WriteLine(tblTiposProducto.CurrentRow.Index);
-            
+            CrearTipoProducto formCrearTipo = new CrearTipoProducto();
+            formCrearTipo.Visible = true;
+            formCrearTipo.FormClosed += new FormClosedEventHandler(cierreCrearTipoProducto);
         }
 
         void cierreCrearTipoProducto(object sender, FormClosedEventArgs e)
         {
             recargarTiposProductos();
+        }
+
+        private void btnEditarTipoProducto_Click(object sender, EventArgs e)
+        {
+            currentRowIndex = tblTiposProducto.CurrentRow.Index;
+            if (tblTiposProducto.CurrentRow.Index < tblTiposProducto.Rows.Count-1)
+            {
+                EditarTipoProducto formEditarTipo = new EditarTipoProducto(int.Parse(tblTiposProducto.CurrentRow.Cells[0].Value.ToString()))
+                {
+                    Visible = true
+                };
+                
+                formEditarTipo.FormClosed += new FormClosedEventHandler(cierreEditarTipoProducto);
+            }
+            
+        }
+
+        void cierreEditarTipoProducto(object sender, FormClosedEventArgs e)
+        {
+            recargarTiposProductos();
+            tblTiposProducto.CurrentCell = tblTiposProducto.Rows[currentRowIndex].Cells[1];
+        }
+
+        private void btnHabDeshabTipoProducto_Click(object sender, EventArgs e)
+        {
+            currentRowIndex = tblTiposProducto.CurrentRow.Index;
+            if (tblTiposProducto.CurrentRow.Index < tblTiposProducto.Rows.Count-1)
+            {
+                string conStr = System.Configuration.ConfigurationManager.ConnectionStrings["bdContext"].ConnectionString;
+                using (MySqlConnection connection = new MySqlConnection(conStr))
+                {
+                    connection.Open();
+                    MySqlTransaction transaction = connection.BeginTransaction();
+
+                    try
+                    {
+                        using (var db = new bdContext())
+                        {
+                            //var item = db.Tipos_producto.Find(int.Parse(tblTiposProducto.CurrentRow.Cells[0].Value.ToString()));
+                            var obj = new Tipo_producto();
+                            if (bool.Parse(tblTiposProducto.CurrentRow.Cells[2].Value.ToString()) == true)
+                            {
+                                obj.cod_tipo_producto = int.Parse(tblTiposProducto.CurrentRow.Cells[0].Value.ToString());
+                                obj.nombre = tblTiposProducto.CurrentRow.Cells[1].Value.ToString();
+                                obj.habilitado = false;
+                            }
+                            else
+                            {
+                                obj.cod_tipo_producto = int.Parse(tblTiposProducto.CurrentRow.Cells[0].Value.ToString());
+                                obj.nombre = tblTiposProducto.CurrentRow.Cells[1].Value.ToString();
+                                obj.habilitado = true;
+                            }
+
+                            db.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+                            db.SaveChanges();
+
+                            transaction.Commit();
+                            recargarTiposProductos();
+                            tblTiposProducto.CurrentCell = tblTiposProducto.Rows[currentRowIndex].Cells[1];
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        MessageBox.Show("Fallo al deshabilitar el registro. Intente de nuevo.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        recargarTiposProductos();
+                        tblTiposProducto.CurrentCell = tblTiposProducto.Rows[currentRowIndex].Cells[1];
+                        throw;
+                    }
+                }
+            }
         }
     }
 }

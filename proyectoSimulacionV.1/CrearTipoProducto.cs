@@ -48,7 +48,7 @@ namespace proyectoSimulacionV._1
 
                         transaction.Commit();
 
-                        MessageBox.Show("Tipo de producto creado!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Tipo de producto creado!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                         
                         //transaction.Dispose();

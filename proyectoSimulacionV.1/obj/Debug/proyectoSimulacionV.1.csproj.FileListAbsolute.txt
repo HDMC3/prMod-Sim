@@ -75,3 +75,4 @@ D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion11.resources
 C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion0.resources
 C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.CrearTipoProducto.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.EditarTipoProducto.resources
