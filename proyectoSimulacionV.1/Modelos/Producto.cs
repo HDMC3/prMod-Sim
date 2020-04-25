@@ -19,6 +19,7 @@ namespace proyectoSimulacionV._1.Modelos
         public string nom_producto { get; set; }
         //[Column(TypeName = "DECIMAL")]
         public double precio_venta { get; set; }
+        public double tiempo_preparacion { get; set; }
         public int stock { get; set; }
         public bool habilitado { get; set; }
         public int cod_tipo_producto { get; set; }

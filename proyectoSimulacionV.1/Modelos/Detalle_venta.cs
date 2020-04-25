@@ -13,7 +13,7 @@ namespace proyectoSimulacionV._1.Modelos
     {
         [Key]
         public int cod_detalle_venta { get; set; }
-        public int cantidad_producto { get; set; }
+        public int? cantidad_producto { get; set; }
         public int cod_cliente { get; set; }
         [ForeignKey("cod_cliente")]
         public virtual Cliente cliente { get; set; }        

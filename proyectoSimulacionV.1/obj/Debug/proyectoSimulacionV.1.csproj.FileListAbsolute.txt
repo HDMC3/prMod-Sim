@@ -73,6 +73,11 @@ D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.exe
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.pdb
 D:\9no semestre\Modelación y simulación\prTienda\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion11.resources
-C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion0.resources
 C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.CrearTipoProducto.resources
 C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.EditarTipoProducto.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.CrearGasto.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.EditarGasto.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.GastosFijos.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.Migrations.migracion0.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV._1.DetalleHora.resources
+C:\Users\hugui\Source\Repos\prMod-Sim\proyectoSimulacionV.1\obj\Debug\proyectoSimulacionV.1.csproj.CoreCompileInputs.cache

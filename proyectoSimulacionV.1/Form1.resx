@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblLeyenda.Text" xml:space="preserve">
+    <value>LEYENDA:
+Ls = Numero de clientes en el sistema
+Ws = Tiempo que un cliente esta en el sistema
+Lq = Numero promedio de clientes esperando en la fila
+Wq = Tiempo que un cliente espera en la fila
+Po = Probabilidad de que el sistema se encuentre vacio</value>
+  </data>
 </root>

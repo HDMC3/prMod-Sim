@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using proyectoSimulacionV._1.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,52 +8,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using proyectoSimulacionV._1.Modelos;
 
 namespace proyectoSimulacionV._1
 {
-    public partial class EditarTipoProducto : Form
+    public partial class EditarGasto : Form
     {
-        private int cod_tipo_prod;
         private string conStr = System.Configuration.ConfigurationManager.ConnectionStrings["bdContext"].ConnectionString;
-        public EditarTipoProducto(int cod_tipo)
+        private int codigoGasto;
+        public EditarGasto(int codGasto)
         {
             InitializeComponent();
-            cod_tipo_prod = cod_tipo;
-            
+            this.codigoGasto = codGasto;
             using (MySqlConnection conexion = new MySqlConnection(conStr))
             {
                 conexion.Open();
                 MySqlTransaction transaccion = conexion.BeginTransaction();
-
                 try
                 {
                     using (var bd = new bdContext(conexion, false))
                     {
                         bd.Database.UseTransaction(transaccion);
 
-                        var item = bd.Tipos_producto.Find(cod_tipo_prod);
-                        txtNombreTipoProducto.Text = item.nombre;
-                        chkTipoHabilitado.Checked = item.habilitado;
-                        
+                        var item = bd.Gastos_fijos.Find(codGasto);
+                        txtNombreGasto.Text = item.nombre_gasto;
+                        txtCantidadGasto.Value = (decimal)item.valor_gasto;
                     }
-
                     transaccion.Commit();
-                    
                 }
                 catch (Exception)
                 {
                     transaccion.Rollback();
                     MessageBox.Show("Error al obtener los datos. Intente de nuevo.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //this.Close();
-                    //throw;
+                    this.Close();
                 }
             }
-            
         }
 
-        private void btnGuardarEditarTipoProducto_Click(object sender, EventArgs e)
+        private void btnGuardarGasto_Click(object sender, EventArgs e)
         {
-            if (txtNombreTipoProducto.Text.Replace(" ", "").Length != 0)
+            if (txtNombreGasto.Text.Replace(" ","").Length != 0)
             {
                 using (MySqlConnection conexion = new MySqlConnection(conStr))
                 {
@@ -66,33 +59,29 @@ namespace proyectoSimulacionV._1
                         using (var bd = new bdContext(conexion, false))
                         {
                             bd.Database.UseTransaction(transaccion);
-                            var item = new Tipo_producto() 
-                            { 
-                                cod_tipo_producto = cod_tipo_prod, 
-                                nombre = txtNombreTipoProducto.Text,
-                                habilitado = chkTipoHabilitado.Checked
+                            int codEscenario = bd.Escenarios.OrderByDescending(es => es.cod_escenario).First().cod_escenario;
+                            var item = new Gasto_fijo()
+                            {
+                                cod_gasto_fijo = codigoGasto,
+                                nombre_gasto = txtNombreGasto.Text,
+                                valor_gasto = (double)txtCantidadGasto.Value,
+                                cod_escenario = codEscenario
                             };
+
                             bd.Entry(item).State = System.Data.Entity.EntityState.Modified;
                             bd.SaveChanges();
                         }
 
                         transaccion.Commit();
-
-                        //MessageBox.Show("Los cambios se guardaron exitosamente!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     catch (Exception)
                     {
+                        MessageBox.Show("Error al guardar el registro. Intente de nuevo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         transaccion.Rollback();
-                        MessageBox.Show("Fallo al guardar los datos. Intente de nuevo.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
-                        //throw;
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("El nombre de tipo no puede estar vacio.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

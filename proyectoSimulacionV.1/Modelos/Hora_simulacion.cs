@@ -14,7 +14,8 @@ namespace proyectoSimulacionV._1.Modelos
         [Key]
         public int cod_hora { get; set; }
         //[Column(TypeName="time")]
-        public DateTime hora { get; set; }
+        //public DateTime hora { get; set; }
+        public int hora { get; set; }
         public int cod_simulacion { get; set; }
         [ForeignKey("cod_simulacion")]
         public virtual Simulacion simulacion { get; set; }

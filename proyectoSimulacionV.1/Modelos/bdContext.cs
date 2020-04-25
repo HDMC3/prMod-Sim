@@ -17,6 +17,11 @@ namespace proyectoSimulacionV._1.Modelos
 
         }
 
+        public bdContext(DbConnection existingConnection, bool a) : base(existingConnection, a)
+        {
+
+        }
+
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Detalle_venta> Detalles_venta { get; set; }
         public DbSet<Hora_simulacion> Horas_simulacion { get; set; }
@@ -24,6 +29,8 @@ namespace proyectoSimulacionV._1.Modelos
         public DbSet<Producto_simulacion> Productos_simulacion { get; set; }
         public DbSet<Simulacion> Simulaciones { get; set; }
         public DbSet<Tipo_producto> Tipos_producto { get; set; }
+        public DbSet<Gasto_fijo> Gastos_fijos { get; set; }
+        public DbSet<Escenario> Escenarios { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

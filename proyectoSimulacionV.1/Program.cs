@@ -16,15 +16,15 @@ namespace proyectoSimulacionV._1
         [STAThread]
         static void Main()
         {
-            using (var db = new bdContext())
-            {
-                if (db.Tipos_producto.Count() == 0)
-                {
-                    db.Tipos_producto.Add(new Tipo_producto() { nombre = "Comida preparada", habilitado = true });
-                    db.SaveChanges();
-                }
+            //using (var db = new bdContext())
+            //{
+            //    if (db.Tipos_producto.Count() == 0)
+            //    {
+            //        db.Tipos_producto.Add(new Tipo_producto() { nombre = "Comida preparada", habilitado = true });
+            //        db.SaveChanges();
+            //    }
                 
-            }
+            //}
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

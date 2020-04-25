@@ -32,27 +32,35 @@ namespace proyectoSimulacionV._1
         {
             using (var db = new bdContext())
             {
-                return db.Tipos_producto.ToList();
+                return db.Tipos_producto.Where(tp => tp.habilitado).ToList();
             }
         }
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
             using (var db = new bdContext())
             {
+                var tiposProducto = dropTiposProductos();
+                var item = (Tipo_producto)txtTipoProducto.SelectedItem;
                 db.Productos.Add(new Producto()
                 {
                     nom_producto = txtNombreProducto.Text,
                     precio_compra = (Double)txtPrecioCostoProducto.Value,
                     precio_venta = (Double)txtPrecioVentaProducto.Value,
+                    tiempo_preparacion = (double)txtTiempoPreparacion.Value,
                     stock = (Int32)txtStock.Value,
-                    tipo_producto = (Tipo_producto)txtTipoProducto.SelectedItem,
+                    cod_tipo_producto = item.cod_tipo_producto,
                     habilitado = chkHabilitado.Checked
                 }) ;
                 db.SaveChanges();
-                MessageBox.Show("Producto creado!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Producto creado!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
             }
+        }
+
+        private void txtTipoProducto_DropDown(object sender, EventArgs e)
+        {
+            txtTipoProducto.DataSource = dropTiposProductos();
         }
     }
 }

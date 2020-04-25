@@ -17,6 +17,7 @@ namespace proyectoSimulacionV._1.Modelos
         public double precio_compra { get; set; }
         //[Column(TypeName = "DECIMAL")]
         public double precio_venta { get; set; }
+        public double tiempo_preparacion { get; set; }
         public int stock { get; set; }
         public int cod_producto { get; set; }
         [ForeignKey("cod_producto")]

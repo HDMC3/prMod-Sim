@@ -97,6 +97,7 @@
             this.ClientSize = new System.Drawing.Size(411, 230);
             this.Controls.Add(this.groupEditarTipoProducto);
             this.Name = "EditarTipoProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarTipoProducto";
             this.groupEditarTipoProducto.ResumeLayout(false);
             this.groupEditarTipoProducto.PerformLayout();

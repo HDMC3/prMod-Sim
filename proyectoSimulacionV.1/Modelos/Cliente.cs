@@ -13,9 +13,9 @@ namespace proyectoSimulacionV._1.Modelos
     {
         [Key]
         public int cod_cliente { get; set; }
-        public double tiempo_servicio { get; set; }
+        public double? tiempo_servicio { get; set; }
         //[Column(TypeName = "date")]
-        public DateTime hora_llegada { get; set; }
+        //public DateTime hora_llegada { get; set; }
         //[Column(TypeName = "varchar(250)")]
         public string nombre { get; set; }
         public int cod_hora {get; set;}

@@ -13,7 +13,7 @@ namespace proyectoSimulacionV._1.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202003020546257_migracion0"; }
+            get { return "202003220100112_migracion0"; }
         }
         
         string IMigrationMetadata.Source

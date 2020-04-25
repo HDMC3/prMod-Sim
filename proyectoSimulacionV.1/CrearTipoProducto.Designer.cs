@@ -97,6 +97,7 @@
             this.ClientSize = new System.Drawing.Size(413, 233);
             this.Controls.Add(this.groupNuevoTipoProducto);
             this.Name = "CrearTipoProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearTipoProducto";
             this.groupNuevoTipoProducto.ResumeLayout(false);
             this.groupNuevoTipoProducto.PerformLayout();

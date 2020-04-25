@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearGasto.Designer.cs">
+      <DependentUpon>CrearGasto.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,18 @@
     </Compile>
     <Compile Include="CrearTipoProducto.Designer.cs">
       <DependentUpon>CrearTipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleHora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleHora.Designer.cs">
+      <DependentUpon>DetalleHora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarGasto.Designer.cs">
+      <DependentUpon>EditarGasto.cs</DependentUpon>
     </Compile>
     <Compile Include="EditarProducto.cs">
       <SubType>Form</SubType>
@@ -115,14 +133,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003020546257_migracion0.cs" />
-    <Compile Include="Migrations\202003020546257_migracion0.Designer.cs">
-      <DependentUpon>202003020546257_migracion0.cs</DependentUpon>
+    <Compile Include="GastosFijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosFijos.Designer.cs">
+      <DependentUpon>GastosFijos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogicaSimulacion.cs" />
+    <Compile Include="Migrations\202003220100112_migracion0.cs" />
+    <Compile Include="Migrations\202003220100112_migracion0.Designer.cs">
+      <DependentUpon>202003220100112_migracion0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelos\bdContext.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Detalle_venta.cs" />
+    <Compile Include="Modelos\Escenario.cs" />
+    <Compile Include="Modelos\Gasto_fijo.cs" />
     <Compile Include="Modelos\Hora_simulacion.cs" />
     <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Modelos\Producto_simulacion.cs" />
@@ -130,11 +157,20 @@
     <Compile Include="Modelos\Tipo_producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrearGasto.resx">
+      <DependentUpon>CrearGasto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearProducto.resx">
       <DependentUpon>CrearProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearTipoProducto.resx">
       <DependentUpon>CrearTipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleHora.resx">
+      <DependentUpon>DetalleHora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarGasto.resx">
+      <DependentUpon>EditarGasto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarProducto.resx">
       <DependentUpon>EditarProducto.cs</DependentUpon>
@@ -145,8 +181,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003020546257_migracion0.resx">
-      <DependentUpon>202003020546257_migracion0.cs</DependentUpon>
+    <EmbeddedResource Include="GastosFijos.resx">
+      <DependentUpon>GastosFijos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003220100112_migracion0.resx">
+      <DependentUpon>202003220100112_migracion0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
