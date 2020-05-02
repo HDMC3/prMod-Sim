@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControlTipos = new System.Windows.Forms.TabControl();
             this.tabProductos = new System.Windows.Forms.TabPage();
@@ -51,9 +51,15 @@
             this.groupTiposProducto = new System.Windows.Forms.GroupBox();
             this.tblTiposProducto = new System.Windows.Forms.DataGridView();
             this.tabSimulacion = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tblResultadosColas = new System.Windows.Forms.DataGridView();
             this.groupBoxResultadosSimulacion = new System.Windows.Forms.GroupBox();
             this.tblSimulacion = new System.Windows.Forms.DataGridView();
             this.groupParametrosEntrada = new System.Windows.Forms.GroupBox();
+            this.lblLeyenda = new System.Windows.Forms.Label();
+            this.lblTasaServicio = new System.Windows.Forms.Label();
+            this.txtCapacidadDeServicio = new System.Windows.Forms.NumericUpDown();
+            this.checkTasaServicio = new System.Windows.Forms.CheckBox();
             this.btnAgregarGastos = new System.Windows.Forms.Button();
             this.lblSeleccionarEscenario = new System.Windows.Forms.Label();
             this.txtCantidadEscenarios = new System.Windows.Forms.NumericUpDown();
@@ -62,12 +68,6 @@
             this.btnGenerarRegistros = new System.Windows.Forms.Button();
             this.txtHorasSimulacion = new System.Windows.Forms.NumericUpDown();
             this.lblHorasSimulacion = new System.Windows.Forms.Label();
-            this.checkTasaServicio = new System.Windows.Forms.CheckBox();
-            this.txtCapacidadDeServicio = new System.Windows.Forms.NumericUpDown();
-            this.lblTasaServicio = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tblResultadosColas = new System.Windows.Forms.DataGridView();
-            this.lblLeyenda = new System.Windows.Forms.Label();
             this.tabControlTipos.SuspendLayout();
             this.tabProductos.SuspendLayout();
             this.groupAccionesProductos.SuspendLayout();
@@ -78,14 +78,14 @@
             this.groupTiposProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblTiposProducto)).BeginInit();
             this.tabSimulacion.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultadosColas)).BeginInit();
             this.groupBoxResultadosSimulacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblSimulacion)).BeginInit();
             this.groupParametrosEntrada.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCapacidadDeServicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidadEscenarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHorasSimulacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCapacidadDeServicio)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblResultadosColas)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlTipos
@@ -189,8 +189,8 @@
             this.tblProductos.MultiSelect = false;
             this.tblProductos.Name = "tblProductos";
             this.tblProductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.tblProductos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.tblProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tblProductos.RowTemplate.Height = 24;
             this.tblProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblProductos.Size = new System.Drawing.Size(991, 573);
@@ -284,8 +284,8 @@
             this.tblTiposProducto.MultiSelect = false;
             this.tblTiposProducto.Name = "tblTiposProducto";
             this.tblTiposProducto.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.tblTiposProducto.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.tblTiposProducto.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.tblTiposProducto.RowTemplate.Height = 24;
             this.tblTiposProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblTiposProducto.Size = new System.Drawing.Size(991, 573);
@@ -303,6 +303,31 @@
             this.tabSimulacion.TabIndex = 1;
             this.tabSimulacion.Text = "Simulacion";
             this.tabSimulacion.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tblResultadosColas);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(377, 408);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(847, 206);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Resultados de linea";
+            // 
+            // tblResultadosColas
+            // 
+            this.tblResultadosColas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblResultadosColas.Location = new System.Drawing.Point(6, 25);
+            this.tblResultadosColas.Name = "tblResultadosColas";
+            this.tblResultadosColas.ReadOnly = true;
+            this.tblResultadosColas.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.tblResultadosColas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.tblResultadosColas.RowTemplate.Height = 24;
+            this.tblResultadosColas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblResultadosColas.Size = new System.Drawing.Size(835, 175);
+            this.tblResultadosColas.TabIndex = 0;
             // 
             // groupBoxResultadosSimulacion
             // 
@@ -322,9 +347,10 @@
             this.tblSimulacion.Location = new System.Drawing.Point(6, 25);
             this.tblSimulacion.MultiSelect = false;
             this.tblSimulacion.Name = "tblSimulacion";
+            this.tblSimulacion.ReadOnly = true;
             this.tblSimulacion.RowHeadersWidth = 51;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.tblSimulacion.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.tblSimulacion.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tblSimulacion.RowTemplate.Height = 24;
             this.tblSimulacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblSimulacion.Size = new System.Drawing.Size(835, 365);
@@ -353,9 +379,63 @@
             this.groupParametrosEntrada.TabStop = false;
             this.groupParametrosEntrada.Text = "Parametros de entrada";
             // 
+            // lblLeyenda
+            // 
+            this.lblLeyenda.AutoSize = true;
+            this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeyenda.Location = new System.Drawing.Point(6, 460);
+            this.lblLeyenda.Name = "lblLeyenda";
+            this.lblLeyenda.Size = new System.Drawing.Size(341, 96);
+            this.lblLeyenda.TabIndex = 12;
+            this.lblLeyenda.Text = resources.GetString("lblLeyenda.Text");
+            // 
+            // lblTasaServicio
+            // 
+            this.lblTasaServicio.AutoSize = true;
+            this.lblTasaServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTasaServicio.Location = new System.Drawing.Point(135, 337);
+            this.lblTasaServicio.Name = "lblTasaServicio";
+            this.lblTasaServicio.Size = new System.Drawing.Size(102, 18);
+            this.lblTasaServicio.TabIndex = 11;
+            this.lblTasaServicio.Text = "(clientes/hora)";
+            // 
+            // txtCapacidadDeServicio
+            // 
+            this.txtCapacidadDeServicio.Enabled = false;
+            this.txtCapacidadDeServicio.Location = new System.Drawing.Point(9, 335);
+            this.txtCapacidadDeServicio.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.txtCapacidadDeServicio.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtCapacidadDeServicio.Name = "txtCapacidadDeServicio";
+            this.txtCapacidadDeServicio.Size = new System.Drawing.Size(120, 26);
+            this.txtCapacidadDeServicio.TabIndex = 10;
+            this.txtCapacidadDeServicio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // checkTasaServicio
+            // 
+            this.checkTasaServicio.AutoSize = true;
+            this.checkTasaServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkTasaServicio.Location = new System.Drawing.Point(9, 307);
+            this.checkTasaServicio.Name = "checkTasaServicio";
+            this.checkTasaServicio.Size = new System.Drawing.Size(325, 22);
+            this.checkTasaServicio.TabIndex = 9;
+            this.checkTasaServicio.Text = "Ingresar capacidad de servicio personalizada";
+            this.checkTasaServicio.UseVisualStyleBackColor = true;
+            this.checkTasaServicio.CheckedChanged += new System.EventHandler(this.checkTasaServicio_CheckedChanged);
+            // 
             // btnAgregarGastos
             // 
-            this.btnAgregarGastos.Enabled = false;
             this.btnAgregarGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarGastos.Location = new System.Drawing.Point(9, 228);
             this.btnAgregarGastos.Name = "btnAgregarGastos";
@@ -458,86 +538,6 @@
             this.lblHorasSimulacion.TabIndex = 0;
             this.lblHorasSimulacion.Text = "Horas a simular:";
             // 
-            // checkTasaServicio
-            // 
-            this.checkTasaServicio.AutoSize = true;
-            this.checkTasaServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkTasaServicio.Location = new System.Drawing.Point(9, 307);
-            this.checkTasaServicio.Name = "checkTasaServicio";
-            this.checkTasaServicio.Size = new System.Drawing.Size(325, 22);
-            this.checkTasaServicio.TabIndex = 9;
-            this.checkTasaServicio.Text = "Ingresar capacidad de servicio personalizada";
-            this.checkTasaServicio.UseVisualStyleBackColor = true;
-            this.checkTasaServicio.CheckedChanged += new System.EventHandler(this.checkTasaServicio_CheckedChanged);
-            // 
-            // txtCapacidadDeServicio
-            // 
-            this.txtCapacidadDeServicio.Enabled = false;
-            this.txtCapacidadDeServicio.Location = new System.Drawing.Point(9, 335);
-            this.txtCapacidadDeServicio.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.txtCapacidadDeServicio.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtCapacidadDeServicio.Name = "txtCapacidadDeServicio";
-            this.txtCapacidadDeServicio.Size = new System.Drawing.Size(120, 26);
-            this.txtCapacidadDeServicio.TabIndex = 10;
-            this.txtCapacidadDeServicio.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // lblTasaServicio
-            // 
-            this.lblTasaServicio.AutoSize = true;
-            this.lblTasaServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTasaServicio.Location = new System.Drawing.Point(135, 337);
-            this.lblTasaServicio.Name = "lblTasaServicio";
-            this.lblTasaServicio.Size = new System.Drawing.Size(102, 18);
-            this.lblTasaServicio.TabIndex = 11;
-            this.lblTasaServicio.Text = "(clientes/hora)";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tblResultadosColas);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(377, 408);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(847, 206);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Resultados de linea";
-            // 
-            // tblResultadosColas
-            // 
-            this.tblResultadosColas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblResultadosColas.Location = new System.Drawing.Point(6, 25);
-            this.tblResultadosColas.Name = "tblResultadosColas";
-            this.tblResultadosColas.ReadOnly = true;
-            this.tblResultadosColas.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.tblResultadosColas.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.tblResultadosColas.RowTemplate.Height = 24;
-            this.tblResultadosColas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblResultadosColas.Size = new System.Drawing.Size(835, 175);
-            this.tblResultadosColas.TabIndex = 0;
-            // 
-            // lblLeyenda
-            // 
-            this.lblLeyenda.AutoSize = true;
-            this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeyenda.Location = new System.Drawing.Point(6, 460);
-            this.lblLeyenda.Name = "lblLeyenda";
-            this.lblLeyenda.Size = new System.Drawing.Size(341, 96);
-            this.lblLeyenda.TabIndex = 12;
-            this.lblLeyenda.Text = resources.GetString("lblLeyenda.Text");
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -557,15 +557,15 @@
             this.groupTiposProducto.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblTiposProducto)).EndInit();
             this.tabSimulacion.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultadosColas)).EndInit();
             this.groupBoxResultadosSimulacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblSimulacion)).EndInit();
             this.groupParametrosEntrada.ResumeLayout(false);
             this.groupParametrosEntrada.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCapacidadDeServicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidadEscenarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHorasSimulacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCapacidadDeServicio)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tblResultadosColas)).EndInit();
             this.ResumeLayout(false);
 
         }

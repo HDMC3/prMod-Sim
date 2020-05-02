@@ -404,7 +404,7 @@ namespace proyectoSimulacionV._1
                 //recargarDatosSimulacion();
                 comboBoxEscenarios.Enabled = true;
                 llenarComboBoxEscenarios();
-                btnAgregarGastos.Enabled = true;
+                //btnAgregarGastos.Enabled = true;
             }
             else
             {
@@ -500,7 +500,7 @@ namespace proyectoSimulacionV._1
                         }
 
                         //Calculo de los gastos fijos por hora
-                        double costoFijoPorHora = (costoStock + costosFijosTotales) / 26;
+                        double costoFijoPorHora = ((costoStock + costosFijosTotales) / 26)/12;
 
                         for (int i = 0; i < horas.Count(); i++)
                         {
@@ -559,7 +559,7 @@ namespace proyectoSimulacionV._1
 
         private void tblSimulacion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < tblSimulacion.Rows.Count-1)
+            if (e.RowIndex < tblSimulacion.Rows.Count-1 && e.RowIndex > -1)
             {
                 int codigoHoraSeleccionada = int.Parse(tblSimulacion.Rows[e.RowIndex].Cells[0].Value.ToString());
                 DetalleHora formDetalleHora = new DetalleHora(codigoHoraSeleccionada);
@@ -637,6 +637,13 @@ namespace proyectoSimulacionV._1
         {
             GastosFijos formGastos = new GastosFijos();
             formGastos.Show();
+            formGastos.FormClosed += new FormClosedEventHandler(cierreAgregarGastos);
+        }
+
+        void cierreAgregarGastos(object sender, FormClosedEventArgs e)
+        {
+            comboBoxEscenarios_SelectedIndexChanged(sender, e);
+            //comboBoxEscenarios.SelectedItem = comboBoxEscenarios.SelectedItem;
         }
 
         private void btnIniciarSimulacion_Click(object sender, EventArgs e)

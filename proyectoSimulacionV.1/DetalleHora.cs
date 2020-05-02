@@ -56,7 +56,7 @@ namespace proyectoSimulacionV._1
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tblClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (tblClientes.CurrentRow != null && tblClientes.CurrentRow.Index < tblClientes.Rows.Count)
             {
@@ -73,7 +73,7 @@ namespace proyectoSimulacionV._1
 
                             int codigoCliente = int.Parse(tblClientes.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                            var productosCliente = bd.Detalles_venta.Where(dv => dv.cod_cliente == codigoCliente).Select(a => new 
+                            var productosCliente = bd.Detalles_venta.Where(dv => dv.cod_cliente == codigoCliente).Select(a => new
                             {
                                 cod_detalle_venta = a.cod_detalle_venta,
                                 nom_producto = a.producto_simulacion.producto.nom_producto,
